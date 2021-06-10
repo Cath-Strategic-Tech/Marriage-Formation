@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '3.35.0'
+project:
+    name: MarriageForm
+    package:
+        name: MarriageForm
+        api_version: '50.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/PMM'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/MarriageForm/tests
+            options:
+                outputdir: robot/MarriageForm/results
+
+    robot_testdoc:
+        options:
+            path: robot/MarriageForm/tests
+            output: robot/MarriageForm/doc/MarriageForm_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
