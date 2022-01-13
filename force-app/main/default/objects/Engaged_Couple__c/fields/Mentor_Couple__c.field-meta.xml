@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mentor_Couple__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The married couple that meets with the couple throughout WTL sessions.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The married couple that meets with the couple throughout WTL sessions.</inlineHelpText>
+    <label>WTL Mentor Couple</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Account.Type</field>
+            <operation>equals</operation>
+            <value>Household</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Engaged Couples (Mentor Couple)</relationshipLabel>
+    <relationshipName>Marriage_Engagements</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

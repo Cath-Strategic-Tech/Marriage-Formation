@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Home_Parish__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Home Parish</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>This lookup must be a Parish account.</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Parish</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Parishioners</relationshipLabel>
+        <relationshipName>Parishioners</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Religious_Affiliation_Self_Identified__c</fullName>
+        <description>2021/08/26 MDM - Requested by Marriage Formation office. Tracks stated religious affiliation of a Contact, for capturing entries on online forms.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For storing a constituent&apos;s self-identified religious affiliation.</inlineHelpText>
+        <label>Religious Affiliation (Self-Identified)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

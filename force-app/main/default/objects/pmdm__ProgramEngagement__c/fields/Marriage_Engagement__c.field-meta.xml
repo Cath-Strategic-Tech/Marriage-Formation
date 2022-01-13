@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marriage_Engagement__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Engaged couple participating in Marriage Formation-related programs</inlineHelpText>
+    <label>Engaged Couple</label>
+    <referenceTo>Engaged_Couple__c</referenceTo>
+    <relationshipLabel>Program Engagements</relationshipLabel>
+    <relationshipName>Program_Engagements</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

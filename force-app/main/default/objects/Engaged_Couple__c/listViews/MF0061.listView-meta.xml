@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MF0061</fullName>
+    <columns>NAME</columns>
+    <columns>Groom__c</columns>
+    <columns>Bride__c</columns>
+    <columns>Intended_Wedding_Date__c</columns>
+    <columns>Parish_preparing_docs__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Completion_Report_Sent__c</columns>
+    <columns>WTL_Only_Track__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MF_Course_Code__c</field>
+        <operation>equals</operation>
+        <value>MF-0061</value>
+    </filters>
+    <label>MF-0061</label>
+    <sharedTo>
+        <group>Marriage_Formation</group>
+    </sharedTo>
+</ListView>

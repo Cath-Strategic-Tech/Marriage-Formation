@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_of_Relationship__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Stage of relationship the couple is in on their path of discernment towards marriage.</inlineHelpText>
+    <label>Stage of Relationship</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-engaged</fullName>
+                <default>false</default>
+                <label>Pre-engaged</label>
+            </value>
+            <value>
+                <fullName>Engaged</fullName>
+                <default>false</default>
+                <label>Engaged</label>
+            </value>
+            <value>
+                <fullName>Civilly Married</fullName>
+                <default>false</default>
+                <label>Civilly Married</label>
+            </value>
+            <value>
+                <fullName>Completed - Sacrament of Marriage</fullName>
+                <default>false</default>
+                <label>Completed - Sacrament of Marriage</label>
+            </value>
+            <value>
+                <fullName>Completed - Relationship Ended</fullName>
+                <default>false</default>
+                <label>Completed - Relationship Ended</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

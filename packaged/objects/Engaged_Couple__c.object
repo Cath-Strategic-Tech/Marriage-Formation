@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Engaged_Couples_Lightning_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Engagement_Couple_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Engagement_Couple_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Stage_of_Relationship__c</fields>
+        <fields>Intended_Wedding_Date__c</fields>
+        <fields>PE_Result__c</fields>
+        <fields>Parish_preparing_docs__c</fields>
+        <label>Engagement Couple Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>All_feedback_forms_received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark as true once all feedback forms for Marriage Formation sessions have been received by both parties.</inlineHelpText>
+        <label>Submitted all coursework</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Alternative_Priest_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>When documentation should be sent to a non-local priest include their name and email here.</inlineHelpText>
+        <label>Alternative Priest &amp; Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alternative_Wedding_Location__c</fullName>
+        <description>Where the wedding is to take place if NOT at the original parish preparing documentation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Where the wedding is to take place if NOT at the original parish preparing documentation.</inlineHelpText>
+        <label>Alternative Wedding Location</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attendance_at_all_sessions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Mark as true once both parties have attended all required Marriage Formation sessions.</inlineHelpText>
+        <label>Attended all required sessions</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bride__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bride</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Engaged Couples (Bride)</relationshipLabel>
+        <relationshipName>Marriage_Engagements</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments_Internal__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Summary comments for internal staff usage. Where more detailed notes are required, create a new related Note.</inlineHelpText>
+        <label>Comments (Internal)</label>
+        <length>20000</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Completion_Report_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The MF Report is distributed to the signing pastor, parish, and the couple.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The MF Report is distributed to the signing pastor, parish, and the couple.</inlineHelpText>
+        <label>Sent MF Report</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contacted_by_WTL_Coordinator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the couple been contacted by the WTL Coordinator or Coaching Couple, to invite them to participate in WTL?</inlineHelpText>
+        <label>Contacted by WTL Coordinator?</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Couple_is_civilly_married__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Couple is civilly married?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Couple_to_participate_in_WTL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the couple expressed their intention to participate in the WTL program?</inlineHelpText>
+        <label>Couple to participate in WTL?</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unsure</fullName>
+                    <default>false</default>
+                    <label>Unsure</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Date_of_Civil_Marriage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Include only if the couple was civilly married previously.</inlineHelpText>
+        <label>Date of Civil Marriage</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fertility_Health_Awareness__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Fertility Health Awareness</label>
+        <referenceTo>pmdm__ServiceSession__c</referenceTo>
+        <relationshipLabel>Engaged Couples</relationshipLabel>
+        <relationshipName>Engaged_Couples</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Fertility_Heath_Awareness2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Fertility Heath Seminar</label>
+        <referenceTo>pmdm__ServiceSchedule__c</referenceTo>
+        <relationshipLabel>Engaged Couples (Fertility Heath Seminar)</relationshipLabel>
+        <relationshipName>Engaged_Couples1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Groom__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Groom</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Engaged Couples (Groom)</relationshipLabel>
+        <relationshipName>Marriage_Engagements1</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Intended_Wedding_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Intended wedding date</inlineHelpText>
+        <label>Intended Wedding Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MF_Course_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>MF_Course_Enrollment__r.Service_Schedule_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MF Course Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MF_Course_Enrollment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Direct lookup to MF Course that Engaged Couple will be attending. Populated via Registration system (FormAssembly).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Direct lookup to MF Course that Engaged Couple will be attending. Populated via Registration system (FormAssembly).</inlineHelpText>
+        <label>MF Course Enrollment</label>
+        <referenceTo>pmdm__ServiceSchedule__c</referenceTo>
+        <relationshipLabel>Engaged Couples</relationshipLabel>
+        <relationshipName>Engaged_Couples</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mentor_Couple_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>WTL Mentor Couple Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mentor_Couple__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The married couple that meets with the couple throughout WTL sessions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The married couple that meets with the couple throughout WTL sessions.</inlineHelpText>
+        <label>WTL Mentor Couple</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.Type</field>
+                <operation>equals</operation>
+                <value>Household</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Engaged Couples (Mentor Couple)</relationshipLabel>
+        <relationshipName>Marriage_Engagements</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Mentor_Couple_text__c</fullName>
+        <externalId>false</externalId>
+        <label>WTL Mentor Couple (text)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Met_with_PE_Facilitator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Met with PE Facilitator</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Next_Wedding_Anniversary__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ 
+YEAR(TODAY())*10000+MONTH(TODAY())*100+DAY(TODAY())  &lt;  YEAR(TODAY())*10000+MONTH( Intended_Wedding_Date__c  )*100+DAY( Intended_Wedding_Date__c ),
+ 
+DATE(YEAR(TODAY()),MONTH( Intended_Wedding_Date__c ),DAY( Intended_Wedding_Date__c )),
+ 
+DATE(YEAR(TODAY()+365),MONTH( Intended_Wedding_Date__c ),DAY( Intended_Wedding_Date__c ))
+ 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Date of couple&apos;s next wedding anniversary - depends on &quot;Wedding Date (Expected)&quot; field.</inlineHelpText>
+        <label>Next Wedding Anniversary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Notes_to_Parish_Priest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Notes to be included on the Completion Report sent to parish priest.</inlineHelpText>
+        <label>Notes to Parish/Priest</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Original_MF_Course_Registration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Original MF Course Registration</label>
+        <referenceTo>Marriage_Form_Registration__c</referenceTo>
+        <relationshipLabel>Engaged Couples</relationshipLabel>
+        <relationshipName>Engaged_Couples</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PE_Facilitator__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>May delete this if PE Facilitator sessions are tracked as Service Deliveries.</inlineHelpText>
+        <label>PE Facilitator</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Engaged Couples (PE Facilitator)</relationshipLabel>
+        <relationshipName>Engaged_Couples</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PE_Report_Sent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PE Report Sent</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PE_Result__c</fullName>
+        <description>Prepare and Enrich results category.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prepare and Enrich results category.</inlineHelpText>
+        <label>PE Result</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Vitalized</fullName>
+                    <default>false</default>
+                    <label>Vitalized</label>
+                </value>
+                <value>
+                    <fullName>Harmonious</fullName>
+                    <default>false</default>
+                    <label>Harmonious</label>
+                </value>
+                <value>
+                    <fullName>Conventional</fullName>
+                    <default>false</default>
+                    <label>Conventional</label>
+                </value>
+                <value>
+                    <fullName>Conflicted</fullName>
+                    <default>false</default>
+                    <label>Conflicted</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PE_enroll_completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Did staff enroll the couple in Prepare &amp; Enrich, so that they can complete the assessment?</inlineHelpText>
+        <label>PE Enrollment completed</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parish_preparing_docs__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Local Parish that is preparing Marriage forms.</inlineHelpText>
+        <label>Parish preparing docs</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.Type</field>
+                <operation>equals</operation>
+                <value>Parish</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Engaged Couples (Parish preparing docs)</relationshipLabel>
+        <relationshipName>Marriage_Engagements1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Passcode__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <inlineHelpText>Passcode that WTL Coordinators use to update Engaged Couple records in FormAssembly form.</inlineHelpText>
+        <label>Passcode</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Received_signed_parish_form__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The office has receive the pastor&apos;s signed approval for the couple to proceed with the marriage formation process.</inlineHelpText>
+        <label>Received Signed Parish Form</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signing_Priest_Deacon__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Priest or Deacon who is pastorally responsible for signing off on Marriage Formation paperwork.</inlineHelpText>
+        <label>Signing Priest/Deacon</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Engaged Couples (Priest)</relationshipLabel>
+        <relationshipName>Marriage_Engagements2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Signing_Priest_Deacon_text__c</fullName>
+        <externalId>false</externalId>
+        <label>Signing Priest/Deacon (text)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_of_Relationship__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage of relationship the couple is in on their path of discernment towards marriage.</inlineHelpText>
+        <label>Stage of Relationship</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pre-engaged</fullName>
+                    <default>false</default>
+                    <label>Pre-engaged</label>
+                </value>
+                <value>
+                    <fullName>Engaged</fullName>
+                    <default>false</default>
+                    <label>Engaged</label>
+                </value>
+                <value>
+                    <fullName>Civilly Married</fullName>
+                    <default>false</default>
+                    <label>Civilly Married</label>
+                </value>
+                <value>
+                    <fullName>Completed - Sacrament of Marriage</fullName>
+                    <default>false</default>
+                    <label>Completed - Sacrament of Marriage</label>
+                </value>
+                <value>
+                    <fullName>Completed - Relationship Ended</fullName>
+                    <default>false</default>
+                    <label>Completed - Relationship Ended</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>To_be_married_outside_of_local_diocese__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If the couple is preparing for marriage locally but will be married outside of the local diocese.</inlineHelpText>
+        <label>To be married outside of local diocese</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WTL_Coaching_Couple__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Local ministry leaders (couple) that facilitate follow-up sessions with the engaged couple and monitors their progress in the WTL program.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local ministry leaders (couple) that facilitate follow-up sessions with the engaged couple and monitors their progress in the WTL program.</inlineHelpText>
+        <label>WTL Coaching Couple</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.Type</field>
+                <operation>equals</operation>
+                <value>Household</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Engaged Couples (Coaching Couple)</relationshipLabel>
+        <relationshipName>Engaged_Couples</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WTL_Mentor_Couple_Relationship__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Did the engaged couple choose mentors from their personal network of relationships, or did they choose from a list of parish volunteers?</inlineHelpText>
+        <label>WTL Mentor Couple Relationship</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Chosen from parish list</fullName>
+                    <default>false</default>
+                    <label>Chosen from parish list</label>
+                </value>
+                <value>
+                    <fullName>Previously existing relationship</fullName>
+                    <default>false</default>
+                    <label>Previously existing relationship</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WTL_Only_Track__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>WTL Only Track</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Engaged Couple</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Groom__c</columns>
+        <columns>Bride__c</columns>
+        <columns>Intended_Wedding_Date__c</columns>
+        <columns>Parish_preparing_docs__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Conflicted_Couples_Last_12_Months</fullName>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Groom__c</columns>
+        <columns>Bride__c</columns>
+        <columns>Intended_Wedding_Date__c</columns>
+        <columns>Parish_preparing_docs__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>PE_Result__c</columns>
+        <columns>PE_Facilitator__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PE_Result__c</field>
+            <operation>equals</operation>
+            <value>Conflicted</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_MONTHS:12</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Conflicted Couples - Last 12 Months</label>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>MF0061</fullName>
+        <columns>NAME</columns>
+        <columns>Groom__c</columns>
+        <columns>Bride__c</columns>
+        <columns>Intended_Wedding_Date__c</columns>
+        <columns>Parish_preparing_docs__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Completion_Report_Sent__c</columns>
+        <columns>WTL_Only_Track__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MF_Course_Code__c</field>
+            <operation>equals</operation>
+            <value>MF-0061</value>
+        </filters>
+        <label>MF-0061</label>
+        <sharedTo>
+            <group>Marriage_Formation</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Engaged Couple</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Engaged Couples</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Bride__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Groom__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Parish_preparing_docs__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage_of_Relationship__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Signing_Priest_Deacon__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Received_signed_parish_form__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Intended_Wedding_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

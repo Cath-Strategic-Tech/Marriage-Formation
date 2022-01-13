@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conflicted_Couples_Last_12_Months</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Groom__c</columns>
+    <columns>Bride__c</columns>
+    <columns>Intended_Wedding_Date__c</columns>
+    <columns>Parish_preparing_docs__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>PE_Result__c</columns>
+    <columns>PE_Facilitator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PE_Result__c</field>
+        <operation>equals</operation>
+        <value>Conflicted</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_MONTHS:12</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>Conflicted Couples - Last 12 Months</label>
+    <sharedTo/>
+</ListView>
