@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Final_Completion_Task__c</fullName>
+    <description>Specifies the final action the MF Program Admin is to take to complete the MF administrative process, to specify the subject line of the Task to be generated.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+      To_be_married_outside_of_local_diocese__c = TRUE, 
+      &quot;Send MF Report and Certificate to &quot; &amp; TEXT(Signing_Priest_Deacon__r.Salutation) &amp; &quot; &quot; &amp; Signing_Priest_Deacon__r.FirstName &amp; &quot; &quot; &amp; Signing_Priest_Deacon__r.LastName,
+      &quot;Send MF Report to &quot; &amp; TEXT(Signing_Priest_Deacon__r.Salutation) &amp; &quot; &quot; &amp; Signing_Priest_Deacon__r.FirstName &amp; &quot; &quot; &amp; Signing_Priest_Deacon__r.LastName
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Specifies the final action the MF Program Admin is to take to complete the MF administrative process, to specify the subject line of the Task to be generated.</inlineHelpText>
+    <label>Final Completion Task</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

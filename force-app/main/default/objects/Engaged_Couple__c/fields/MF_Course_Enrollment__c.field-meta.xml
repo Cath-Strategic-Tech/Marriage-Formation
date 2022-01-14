@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MF_Course_Enrollment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Direct lookup to MF Course that Engaged Couple will be attending. Populated via Registration system (FormAssembly).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Direct lookup to MF Course that Engaged Couple will be attending. Populated via Registration system (FormAssembly).</inlineHelpText>
+    <label>MF Course Enrollment</label>
+    <referenceTo>pmdm__ServiceSchedule__c</referenceTo>
+    <relationshipLabel>Engaged Couples</relationshipLabel>
+    <relationshipName>Engaged_Couples</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

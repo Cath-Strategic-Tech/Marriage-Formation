@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_MF_Requirements_Complete__c</fullName>
+    <description>Checks if all requirements have been marked as complete: Attendance at all sessions = TRUE, Submitted all coursework = TRUE, Couple met with PE Facilitator = TRUE.</description>
+    <externalId>false</externalId>
+    <formula>AND(
+    Attendance_at_all_sessions__c = TRUE,
+    All_feedback_forms_received__c = TRUE,
+    Couple_Met_with_PE_Facilitator__c = TRUE
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Checks if all requirements have been marked as complete: Attendance at all sessions = TRUE, Submitted all coursework = TRUE, Couple met with PE Facilitator = TRUE.</inlineHelpText>
+    <label>All MF Requirements Complete</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marriage_Formation</fullName>
+    <active>true</active>
+    <description>Program Engagements of Marriage Formation programs.</description>
+    <label>Marriage Formation</label>
+    <picklistValues>
+        <picklist>pmdm__Role__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Service Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volunteer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>pmdm__Stage__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrolled</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

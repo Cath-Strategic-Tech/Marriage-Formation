@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>His_State_Province_FORMULA__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(His_Address_State_Province__c,
+&quot;BC&quot;, &quot;British Columbia&quot;, 
+&quot;AB&quot;, &quot;Alberta&quot;, 
+&quot;MB&quot;, &quot;Manitoba&quot;, 
+&quot;SK&quot;, &quot;Saskatchewan&quot;, 
+&quot;NS&quot;, &quot;Nova Scotia&quot;, 
+&quot;NB&quot;, &quot;New Brunswick&quot;, 
+&quot;NL&quot;, &quot;Newfoundland And Labrador&quot;,
+&quot;ON&quot;, &quot;Ontario&quot;,
+&quot;PE&quot;, &quot;Prince Edward Island&quot;,
+&quot;QB&quot;, &quot;Quebec&quot;,
+&quot;NT&quot;, &quot;Northwest Territories&quot;, 
+&quot;YT&quot;, &quot;Yukon&quot;, 
+&quot;NU&quot;, &quot;Nunavut&quot;,
+His_Address_State_Province__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>His State/Province (FORMULA)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

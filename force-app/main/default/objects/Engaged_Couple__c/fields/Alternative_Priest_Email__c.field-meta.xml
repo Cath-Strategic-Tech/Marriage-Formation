@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_Priest_Email__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>When documentation should be sent to a non-local priest include their name and email here.</inlineHelpText>
+    <label>Alternative Priest &amp; Email</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

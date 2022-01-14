@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Couple_Met_with_PE_Facilitator__c</fullName>
+    <description>If &apos;PE Facilitator Meeting Date&apos; field value is not null and is in the past, a Couple is considered to have met with their PE Facilitator.</description>
+    <externalId>false</externalId>
+    <formula>AND(
+     PE_Facilitator_Meeting_Date__c &lt; TODAY(),
+      PE_Facilitator__c != NULL
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If &apos;PE Facilitator Meeting Date&apos; field value is not empty and the date is in the past, a Couple is considered to have met with their PE Facilitator.</inlineHelpText>
+    <label>Couple Met with PE Facilitator</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

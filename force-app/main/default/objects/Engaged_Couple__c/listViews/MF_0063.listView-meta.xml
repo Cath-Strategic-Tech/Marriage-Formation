@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MF_0063</fullName>
+    <columns>NAME</columns>
+    <columns>Bride__c</columns>
+    <columns>Groom__c</columns>
+    <columns>Parish_preparing_docs__c</columns>
+    <columns>Intended_Wedding_Date__c</columns>
+    <columns>PE_Facilitator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MF_Course_Code__c</field>
+        <operation>equals</operation>
+        <value>MF-0063</value>
+    </filters>
+    <label>MF-0063</label>
+</ListView>

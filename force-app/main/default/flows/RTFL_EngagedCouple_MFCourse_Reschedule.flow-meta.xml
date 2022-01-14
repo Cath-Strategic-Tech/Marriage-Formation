@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends error message to the Flow&apos;s author.</description>
+        <name>Error_Email</name>
+        <label>Error Email</label>
+        <locationX>754</locationX>
+        <locationY>1091</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ErrorHandlingEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>matt@meribahflow.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>An error occurred in the &quot;Reschedule Engaged Couple&apos;s Service Schedule&quot; flow</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>CHECK_MFCourseHadPriorValue</name>
+        <label>CHECK if MFCourse had prior value</label>
+        <locationX>930</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Error_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>ERROR</defaultConnectorLabel>
+        <rules>
+            <name>CHECK_MFCourseHadPriorValue_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.MF_Course_Enrollment__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.MF_Course_Enrollment__r.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.MF_Course_Enrollment__r.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Groom_Service_Participant</targetReference>
+            </connector>
+            <label>Had Prior Value</label>
+        </rules>
+        <rules>
+            <name>CHECK_MFCourseHadPriorValue_No</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.MF_Course_Enrollment__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>No Prior Value</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Tests to see if found Bride&apos;s record.</description>
+        <name>Found_Bride_s_Service_Participant_record_0</name>
+        <label>Found Bride&apos;s Service Participant record?</label>
+        <locationX>50</locationX>
+        <locationY>1091</locationY>
+        <defaultConnector>
+            <targetReference>Error_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>ERROR</defaultConnectorLabel>
+        <rules>
+            <name>Can_t_find_Bride_serv_part</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bride_s_Service_Participant_record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Bride_Service_Participant_record_0</targetReference>
+            </connector>
+            <label>Can&apos;t find record</label>
+        </rules>
+        <rules>
+            <name>Found_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Bride_s_Service_Participant_record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Bride_Service_Participant_record_0</targetReference>
+            </connector>
+            <label>Found Record</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Found_Groom_s_Service_Participant_record</name>
+        <label>Found Groom&apos;s Service Participant record?</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <defaultConnector>
+            <targetReference>Error_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>ERROR</defaultConnectorLabel>
+        <rules>
+            <name>Can_t_find_Groom_serv_part</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Groom_Service_Participant</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Groom_s_Service_Participant_record</targetReference>
+            </connector>
+            <label>Can&apos;t find Groom&apos;s Serv Part record</label>
+        </rules>
+        <rules>
+            <name>Found_Groom_s_Serv_Part_Record_Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Groom_Service_Participant</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Groom_s_Service_Participant_record</targetReference>
+            </connector>
+            <label>Found Groom&apos;s Serv Part Record</label>
+        </rules>
+    </decisions>
+    <interviewLabel>RTFL_EngagedCouple_MFCourse_Reschedule {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RTFL_EngagedCouple_MFCourse_Reschedule</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Gets the Bride&apos;s old Service Participant record that needs updating (rescheduling).</description>
+        <name>Get_Bride_s_Service_Participant_record</name>
+        <label>Get Bride&apos;s Service Participant record</label>
+        <locationX>50</locationX>
+        <locationY>971</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_Bride_s_Service_Participant_record_0</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>pmdm__ServiceSchedule__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.MF_Course_Enrollment__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>pmdm__Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.Bride__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>pmdm__ServiceParticipant__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the Groom&apos;s service participant record that needs updating (rescheduling).</description>
+        <name>Get_Groom_Service_Participant</name>
+        <label>Get Groom Service Participant</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_Groom_s_Service_Participant_record</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>pmdm__ServiceSchedule__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.MF_Course_Enrollment__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>pmdm__Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.Groom__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>pmdm__ServiceParticipant__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update&apos;s the Service Participant record with updated look up to Service Delivery schedule.</description>
+        <name>Update_Bride_Service_Participant_record_0</name>
+        <label>Update Bride&apos;s Service Participant record</label>
+        <locationX>50</locationX>
+        <locationY>1367</locationY>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Bride_s_Service_Participant_record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>BrideServePartName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>pmdm__ServiceSchedule__c</field>
+            <value>
+                <elementReference>$Record.MF_Course_Enrollment__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>pmdm__ServiceParticipant__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update&apos;s the Service Participant record with updated look up to Service Delivery schedule.</description>
+        <name>Update_Groom_s_Service_Participant_record</name>
+        <label>Update Groom&apos;s Service Participant record</label>
+        <locationX>50</locationX>
+        <locationY>851</locationY>
+        <connector>
+            <targetReference>Get_Bride_s_Service_Participant_record</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Groom_Service_Participant.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>GroomServPartName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>pmdm__ServiceSchedule__c</field>
+            <value>
+                <elementReference>$Record.MF_Course_Enrollment__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>pmdm__ServiceParticipant__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>804</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CHECK_MFCourseHadPriorValue</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>MF_Course_Enrollment__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Engaged_Couple__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>BrideServePartName</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Record.Bride__r.FirstName} {!$Record.Bride__r.LastName} - MF Course - {!$Record.MF_Course_Enrollment__r.Service_Schedule_Code__c}</text>
+    </textTemplates>
+    <textTemplates>
+        <description>Test template for Error Email Notifications that includes as variables.</description>
+        <name>ErrorHandlingEmail</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Error: {!$Flow.FaultMessage}
+
+RESOURCE VALUES
+Engaged Couple: {!$Record__Prior.Id}
+Bride: {!$Record__Prior.Bride__r.Id}
+Groom: {!$Record__Prior.Groom__r.Id}
+Previous Service Schedule: {!$Record__Prior.Original_MF_Course_Registration__r.Id}
+Found Bride&apos;s Service Participant?: {!Can_t_find_Bride_serv_part}
+Bride&apos;s OLD Service Participant: {!Get_Bride_s_Service_Participant_record.Id}
+Found Groom&apos;s Service Participant?: {!Can_t_find_Groom_serv_part}
+Groom&apos;s OLD Service Participant: {!Get_Groom_Service_Participant.Id}
+Running User: {!$User.Username}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>GroomServPartName</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Record.Groom__r.FirstName} {!$Record.Groom__r.LastName} - MF Course - {!$Record.MF_Course_Enrollment__r.Service_Schedule_Code__c}</text>
+    </textTemplates>
+</Flow>

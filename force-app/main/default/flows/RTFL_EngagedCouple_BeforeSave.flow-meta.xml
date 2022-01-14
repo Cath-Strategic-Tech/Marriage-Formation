@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Update_Name</name>
+        <label>Update Name</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EngagedCoupleRecordName</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_Name_0</name>
+        <label>Update Name</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>EngagedCoupleRecordName</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Insert_or_Update</name>
+        <label>Insert or Update?</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Update_Name_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Update</defaultConnectorLabel>
+        <rules>
+            <name>Insert</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Name</targetReference>
+            </connector>
+            <label>Insert</label>
+        </rules>
+    </decisions>
+    <description>Updates fields on Engaged Couple record BEFORE record is committed to database.</description>
+    <formulas>
+        <name>EngagedCoupleName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Bride__r.Name} &amp; {!$Record.Groom__r.Name}</expression>
+    </formulas>
+    <formulas>
+        <name>IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>RTFL_EngagedCouple_BeforeSave {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RTFL_EngagedCouple_BeforeSave</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Insert_or_Update</targetReference>
+        </connector>
+        <object>Engaged_Couple__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EngagedCoupleRecordName</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Record.Bride__r.FirstName} {!$Record.Bride__r.LastName} &amp; {!$Record.Groom__r.FirstName} {!$Record.Groom__r.LastName}</text>
+    </textTemplates>
+</Flow>
