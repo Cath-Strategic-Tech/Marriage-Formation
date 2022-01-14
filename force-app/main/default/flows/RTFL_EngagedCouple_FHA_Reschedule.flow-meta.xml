@@ -29,9 +29,9 @@
     </actionCalls>
     <apiVersion>53.0</apiVersion>
     <decisions>
-        <description>Checks to see that this flow runs ONLY if FAH was previously populated but has been changed</description>
-        <name>CHECK_FAHhadPriorValue</name>
-        <label>CHECK if FAH had prior value</label>
+        <description>Checks to see that this flow runs ONLY if FHA was previously populated but has been changed</description>
+        <name>CHECK_FHAhadPriorValue</name>
+        <label>CHECK if FHA had prior value</label>
         <locationX>886</locationX>
         <locationY>335</locationY>
         <defaultConnector>
@@ -39,7 +39,7 @@
         </defaultConnector>
         <defaultConnectorLabel>ERROR</defaultConnectorLabel>
         <rules>
-            <name>CHECK_FAHhadPriorValue_Yes</name>
+            <name>CHECK_FHAhadPriorValue_Yes</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior.Fertility_Heath_Awareness2__r.Id</leftValueReference>
@@ -61,7 +61,7 @@
             <label>Had Prior Value</label>
         </rules>
         <rules>
-            <name>CHECK_FAHhadPriorValue_No</name>
+            <name>CHECK_FHAhadPriorValue_No</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record__Prior.Fertility_Heath_Awareness2__r.Id</leftValueReference>
@@ -308,7 +308,7 @@
         <locationX>760</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>CHECK_FAHhadPriorValue</targetReference>
+            <targetReference>CHECK_FHAhadPriorValue</targetReference>
         </connector>
         <filterLogic>or</filterLogic>
         <filters>

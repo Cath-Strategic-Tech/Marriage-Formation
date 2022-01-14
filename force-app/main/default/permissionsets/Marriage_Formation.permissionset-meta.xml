@@ -72,7 +72,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Engaged_Couple__c.FAH_Course_Code__c</field>
+        <field>Engaged_Couple__c.FHA_Course_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

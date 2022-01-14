@@ -80,7 +80,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>FAH_Course_Code__c</field>
+                <field>FHA_Course_Code__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
